@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<style>
+    a {
+        display: inline;
+    }
+    body { 
+        background-image:url("website background.png");
+    }
+
+    #blackOverlay{
+        position: absolute; 
+        width: 100%; 
+        height: 100%;
+        top: 0; 
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.4); 
+        z-index: 2;
+        bottom: 0;
+        overflow: auto;
+    }
+
+    ul{
+        position:relative;
+        display:flex;
+        width:80%;
+        left:8%;
+        justify-content: space-around;
+        list-style-type: none;
+        font-family:"Verdana";
+        font-size:37px;
+        color:White;
+    }
+
+    #navBar{
+        position: relative;
+        height:15%;
+        background-color: rgba(0,0,0,0.65); 
+        padding: 2%;
+    }
+    .listItem:hover{
+        background-color: white;
+    }
+
+    .listItem{
+        height:80%;
+    }
+
+    .linkText{
+        text-decoration: none;
+        color:white;
+    }
+
+    .listItem:hover .linkText{
+        color:black;
+        text-decoration:none;
+    }
+
+    #resume {
+        width: 40%;
+        position: relative;
+        left: 29.5%;
+        top:2%;
+        background-color: black;
+        text-align: center;
+        font-size: 50px;
+        font-family: "Verdana";
+        color: White;
+        border:white;
+        border-style: solid;
+        border-width: 7px;
+
+    }
+
+    #resumeContent{
+        display:flex;
+        position:absolute;
+        width:50%;
+        height:150%;
+        top: 50%;
+        left: 24.5%;
+        background-color:rgba(240,240,240,1);
+        border-color: black;
+        border-style: solid;
+        border-width:10px;
+    }
+
+    #resumePDF{
+        width:100%;
+        height:100%;
+    }
+
+    #jobTextSpace{
+        display:flex;
+        position:absolute;
+        width:50%;
+        height:20%;
+        top: 205%;
+        left: 24.5%;
+        background-color:rgba(240,240,240,1);
+        border-color: black;
+        border-style: solid;
+        border-width:10px;
+    }
+
+    #jobText {
+        position: relative;
+        width:90%;
+        left:5%;
+        color:black;
+        font-family: "Verdana";
+        font-size: 17px;
+    }
+
+    #portfolio{
+        width: 40%;
+        position: relative;
+        left: 29.5%;
+        top:200%;
+        background-color: black;
+        text-align: center;
+        font-size: 50px;
+        font-family: "Verdana";
+        color: White;
+        border:white;
+        border-style: solid;
+        border-width: 7px;
+    }
+
+    #chromeCaloriesSpace{
+        display:flex;
+        position:absolute;
+        width:50%;
+        height:40%;
+        top: 260%;
+        left: 24.5%;
+        background-color:rgba(240,240,240,1);
+        border-color: black;
+        border-style: solid;
+        border-width:10px;
+    }
+
+    #chromeCaloriesPhoto{
+        position: relative;
+        top: 5%;
+        left:1%;
+        border-style:solid;
+        border-width:1px;
+        width:30%;
+        height:90%
+    }
+
+    #chromeCaloriesTextHead{
+        position: relative;
+        height:20%;
+        width:40%;
+        left:25%;
+        color:black;
+        font-family: "Verdana";
+        font-size: 25px;
+        font-style: "strong";
+
+    }
+
+    #chromeCaloriesText{
+        display:flex;
+        position: relative;
+        width:100%;
+        height: 70%;
+        top:25%;
+        right:10%;
+        color:black;
+        font-family: "Verdana";
+        font-size: 16px;
+    }
+
+    #tetrisSpace{
+        display:flex;
+        position:absolute;
+        width:50%;
+        height:40%;
+        top: 310%;
+        left: 24.5%;
+        background-color:rgba(240,240,240,1);
+        border-color: black;
+        border-style: solid;
+        border-width:10px;
+    }
+
+    #tetrisPhoto{
+        position: relative;
+        top: 5%;
+        left:1%;
+        border-style:solid;
+        border-width:1px;
+        width:30%;
+        height:90%
+    }
+
+    #tetrisTextHead{
+        position: relative;
+        height:20%;
+        width:40%;
+        left:25%;
+        color:black;
+        font-family: "Verdana";
+        font-size: 25px;
+        font-style: "strong";
+    }
+
+    #tetrisText{
+        display:flex;
+        position: relative;
+        width:100%;
+        height: 70%;
+        top:25%;
+        right:10%;
+        color:black;
+        font-family: "Verdana";
+        font-size: 16px;
+    }
+
+    #upcoming{
+        display:flex;
+        position:absolute;
+        width:50%;
+        height:30%;
+        top: 360%;
+        left: 24.5%;
+        background-color:rgba(240,240,240,1);
+        border-color: black;
+        border-style: solid;
+        border-width:10px;
+    }
+
+    #upcomingText{
+        position: relative;
+        width:90%;
+        height: 60%;
+        top:0%;
+        left:2%;
+        color:black;
+        font-family: "Verdana";
+        font-size: 17px;
+    }
+
+    #linkBox{
+        position:absolute;
+        width:50%;
+        height:20%;
+        top: 400%;
+        left: 24.5%;
+        background-color:rgba(240,240,240,1);
+        border-color: black;
+        border-style: solid;
+        border-width:10px;
+    }
+
+    #linkBoxText{
+        position: relative;
+        width:90%;
+        height: 60%;
+        top:0%;
+        left:2%;
+        color:black;
+        font-family: "Verdana";
+        font-size: 17px;
+    }
+
+    #community{
+        width: 40%;
+        position: relative;
+        left: 29.5%;
+        top:350%;
+        background-color: black;
+        text-align: center;
+        font-size: 50px;
+        font-family: "Verdana";
+        color: White;
+        border:white;
+        border-style: solid;
+        border-width: 7px;
+    }
+
+    #communitySpace{
+        display:flex;
+        position:absolute;
+        width:50%;
+        height:40%;
+        top: 430%;
+        left: 24.5%;
+        background-color:rgba(240,240,240,1);
+        border-color: black;
+        border-style: solid;
+        border-width:10px;
+    }
+
+    #codingClubPhoto{
+        position: relative;
+        width:23%;
+        height:95%;
+        left:2%;
+        top:2%;
+        border-style: solid;
+        border-width:2px;
+    }
+
+    #communityText{
+        position: relative;
+        width:68%;
+        color:black;
+        font-family: "Verdana";
+        left: 5%;
+        font-size: 17px;
+    }
+
+</style>
+<html>
+    <head>
+        <title>Nikolai Thompson</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Nikolai de Lisle Thompson">
+        <meta name="description" content="Professional Summary of Nikolai Thompson">
+        <meta name="keywords" content="Computer Science, TAMU,">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id = "blackOverlay">
+            <div id = "navBar">
+                    <ul>
+                        <li class = listItem><a class = linkText href = "index.html">Home</a></li>
+                        <li class = listItem><a class = linkText href = "aboutMe.html">About Me</a></li>
+                        <li class = listItem><a class = linkText href = "workpage.html">Professional Work</a></li>
+                        <li class = listItem><a class = linkText href = "#portfolio">Portfolio</a></li>
+                        <li class = listItem><a class = linkText href = #community>Community</a></li>
+                    </ul>
+            </div>
+            <h1 id = resume>Resumé</h1>
+            <div id = resumeContent>
+                <iframe id = resumePDF src = "NikolaiResume.pdf"></iframe>
+            </div>
+            <div id = jobTextSpace>
+                    <p id = jobText>Not mentioned on my resumé is my current job at the <a href = https://www.tamhsc.edu>Texas A&M Health Science Center</a> as a student technician.
+                            I help manage our technical workflow to ensure that all lectures are recorded and that all recordings are edited 
+                            and uploaded to A&M servers. And if you're curious about Flash Parking find out more abou them <a href = https://www.flashparking.com> here</a>.
+                    </p>
+            </div>
+            <h1 id = portfolio>Portfolio</h1>
+            <div id = chromeCaloriesSpace>
+                <img id =chromeCaloriesPhoto src = "chrome_calories.PNG" alt = "chrome Calories demo">
+                <h2 id = chromeCaloriesTextHead>Chrome Calories</h2>
+                <p id = chromeCaloriesText>&nbsp; &nbsp; &nbsp; &nbsp; Enter a food name or a URL with a recipe and get a calorie count. My contributions to chrome
+                    calories include checking user's API credentials to make sure they've set up their API key and giving appropriate feedback. Also
+                    implementing other feedback for error handling. On top of that writing the asynchronous functions that link the web scraping to the API calls and display.
+                </p>
+            </div>
+            <div id = tetrisSpace>
+                    <img id =tetrisPhoto src = "tetris.png" alt = "textris untexted demo">
+                    <h2 id = tetrisTextHead>Textris Untexted</h2>
+                    <p id = tetrisText>&nbsp; &nbsp; &nbsp; &nbsp; Textris Untexted(my tetris clone) originally started as my own text-based version of tetris.
+                        I decided that wasn't good enough, which inspired me to add graphics. Textris Untexted now uses openGL to display gameplay.
+                        It's not entirely finished and more core features will be implemented.
+                    </p>
+            </div>
+            <div id = upcoming >
+                    <p id = upcomingText>Another upcoming project that I will be participating in during the fall 2019 semester is the development of a new weed
+                        management system. The project goal is to train AI to be able to recognize weeds in crop fields. The idea is that if this is 
+                        possible then drones/robots could kill weeds using physical methods rather than dousing the whole field in herbicide
+                        which has health and environmental impacts.<br><br>
+                        If you liked any of these projects check out the source code on my <a href = "testPage.html">Github</a>.
+                        Interested in learning openGL? <a href = https://learnopengl.com/Introduction>This</a> is where to start.
+                    </p>
+            </div>
+            <h1 id = community>Community</h1>
+            <div id = communitySpace>
+                <img id = codingClubPhoto src = "codingClub.png" alt = "coding club logo">
+                <p id = communityText>
+                    Being involved with community and organizations is something that I do here at A&M. In the past this has been
+                    primarily through the <a href = http://aggiecodingclub.com>Aggie Coding Club</a>. In my portfolio section I mentioned
+                    Chrome Calories. This was most of the work that I did with ACC but of course attending their social events and competitions
+                    has been part of my investment with them too. I plan on returning as a project lead next semester.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; My other major community involvement was at <a href = https://www.shoalcreeksaloon.com>Shoal Creek Saloon</a>
+                    Most people might find it somewhat odd for a restaurant job to be part of community. However,
+                    it's the one job where I felt that working there actually meant being part of a community. I have nothing but the utmost respect
+                    for everyone that works there. Except for Todd. 
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
