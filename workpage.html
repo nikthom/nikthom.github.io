@@ -74,11 +74,16 @@
 
     }
 
+    #resumePDF{
+        width:100%;
+        height:100%;
+    }
+    
     #resumeContent{
         display:flex;
         position:absolute;
-        width:50%;
-        height:150%;
+        width:790px;
+        height:1070px;
         top: 50%;
         left: 24.5%;
         background-color:rgba(240,240,240,1);
@@ -87,10 +92,7 @@
         border-width:10px;
     }
 
-    #resumePDF{
-        width:100%;
-        height:100%;
-    }
+    
 
     #jobTextSpace{
         display:flex;
@@ -334,17 +336,15 @@
                         <li class = listItem><a class = linkText href = "aboutMe.html">About Me</a></li>
                         <li class = listItem><a class = linkText href = "workpage.html">Professional Work</a></li>
                         <li class = listItem><a class = linkText href = "#portfolio">Portfolio</a></li>
-                        <li class = listItem><a class = linkText href = #community>Community</a></li>
                     </ul>
             </div>
             <h1 id = resume>Resumé</h1>
             <div id = resumeContent>
-                <iframe id = resumePDF src = "NikolaiResume.pdf"></iframe>
+                <embed id = resumePDF src = "NikolaiResume.pdf"></embed>
             </div>
             <div id = jobTextSpace>
-                    <p id = jobText>Not mentioned on my resumé is my current job at the <a href = https://www.tamhsc.edu>Texas A&M Health Science Center</a> as a student technician.
-                            I help manage our technical workflow to ensure that all lectures are recorded and that all recordings are edited 
-                            and uploaded to A&M servers. And if you're curious about Flash Parking find out more abou them <a href = https://www.flashparking.com> here</a>.
+                    <p id = jobText>Not mentioned on my resumé is my upcoming project to tackle the traveling salesman problem. I'm going to be implementing my own algorithms
+                        that find close to but non-optimal solutions to the traveling salesman problem. The purpose is to give myself an opportunity to learn Python.
                     </p>
             </div>
             <h1 id = portfolio>Portfolio</h1>
@@ -364,29 +364,7 @@
                         It's not entirely finished and more core features will be implemented.
                     </p>
             </div>
-            <div id = upcoming >
-                    <p id = upcomingText>Another upcoming project that I will be participating in during the fall 2019 semester is the development of a new weed
-                        management system. The project goal is to train AI to be able to recognize weeds in crop fields. The idea is that if this is 
-                        possible then drones/robots could kill weeds using physical methods rather than dousing the whole field in herbicide
-                        which has health and environmental impacts.<br><br>
-                        If you liked any of these projects check out the source code on my <a href = "testPage.html">Github</a>.
-                        Interested in learning openGL? <a href = https://learnopengl.com/Introduction>This</a> is where to start.
-                    </p>
-            </div>
-            <h1 id = community>Community</h1>
-            <div id = communitySpace>
-                <img id = codingClubPhoto src = "codingClub.png" alt = "coding club logo">
-                <p id = communityText>
-                    Being involved with community and organizations is something that I do here at A&M. In the past this has been
-                    primarily through the <a href = http://aggiecodingclub.com>Aggie Coding Club</a>. In my portfolio section I mentioned
-                    Chrome Calories. This was most of the work that I did with ACC but of course attending their social events and competitions
-                    has been part of my investment with them too. I plan on returning as a project lead next semester.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp; My other major community involvement was at <a href = https://www.shoalcreeksaloon.com>Shoal Creek Saloon</a>
-                    Most people might find it somewhat odd for a restaurant job to be part of community. However,
-                    it's the one job where I felt that working there actually meant being part of a community. I have nothing but the utmost respect
-                    for everyone that works there. Except for Todd. 
-                </p>
-            </div>
+            
         </div>
     </body>
 </html>
